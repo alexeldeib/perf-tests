@@ -170,7 +170,7 @@ func completeConfig(m *framework.MultiClientSet) error {
 		clusterLoaderConfig.ClusterConfig.SSHToMasterSupported = true
 	}
 	if clusterLoaderConfig.ClusterConfig.Provider == "aks" {
-		clusterLoaderConfig.ClusterConfig.APIServerPprofByClientEnabled = false
+		clusterLoaderConfig.ClusterConfig.APIServerPprofByClientEnabled = true
 	}
 	prometheus.CompleteConfig(&clusterLoaderConfig.PrometheusConfig)
 	return nil
